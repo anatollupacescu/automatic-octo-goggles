@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CORA — libertate financiară fără granițe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12203D;
+    --ink-soft:#2C3A5B;
+    --paper:#F2F0E6;
+    --paper-dim:#E9E5D6;
+    --gold:#B98B2B;
+    --gold-soft:#DEC583;
+    --rust:#A64B32;
+    --slate:#56617A;
+    --line: rgba(18,32,61,0.14);
+    --line-on-ink: rgba(242,240,230,0.18);
+    --radius: 2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Instrument Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- ticker ---------- */
+  .ticker{
+    background:var(--ink);
+    color:var(--paper);
+    overflow:hidden;
+    white-space:nowrap;
+    border-bottom:1px solid var(--line-on-ink);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.04em;
+  }
+  .ticker-track{
+    display:inline-block;
+    padding-left:100%;
+    animation: scrollTicker 32s linear infinite;
+  }
+  @keyframes scrollTicker{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-100%);}
+  }
+  .ticker span{padding:8px 22px; display:inline-block;}
+  .ticker span b{color:var(--gold-soft); font-weight:500;}
+
+  /* ---------- nav ---------- */
+  header.nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 0;
+  }
+  .logo{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:21px;
+    letter-spacing:-0.01em;
+  }
+  .logo em{
+    font-style:italic;
+    color:var(--rust);
+  }
+  .nav-cta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    text-decoration:none;
+    border:1px solid var(--ink);
+    padding:9px 16px;
+    border-radius:var(--radius);
+    transition:background .15s ease, color .15s ease;
+  }
+  .nav-cta:hover{background:var(--ink); color:var(--paper);}
+  .nav-cta:focus-visible{outline:2px solid var(--rust); outline-offset:2px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:64px 0 84px;
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:56px;
+    align-items:center;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--rust);
+    margin:0 0 18px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:1px; background:var(--rust);
+    display:inline-block;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:clamp(34px, 4.6vw, 54px);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+    margin:0 0 22px;
+  }
+  h1 i{font-style:italic; color:var(--ink-soft);}
+  .hero p.lede{
+    font-size:17px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    max-width:46ch;
+    margin:0 0 30px;
+  }
+  .hero-actions{display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:'Instrument Sans', sans-serif;
+    font-weight:600;
+    font-size:15px;
+    border:none;
+    padding:14px 26px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn-primary:hover{background:var(--rust);}
+  .btn-primary:focus-visible{outline:2px solid var(--rust); outline-offset:3px;}
+  .hero-sub{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--slate);
+  }
+
+  /* ---------- ticket / signature element ---------- */
+  .ticket{
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:6px;
+    position:relative;
+    padding:26px 26px 22px;
+    box-shadow:0 22px 44px -22px rgba(18,32,61,0.55);
+  }
+  .ticket::before, .ticket::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    width:22px; height:22px;
+    background:var(--paper);
+    border-radius:50%;
+    transform:translateY(-50%);
+  }
+  .ticket::before{left:-11px;}
+  .ticket::after{right:-11px;}
+  .ticket-row{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    padding-bottom:18px; margin-bottom:18px;
+    border-bottom:1px dashed var(--line-on-ink);
+  }
+  .ticket-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--gold-soft); margin:0 0 6px;
+  }
+  .ticket-value{
+    font-family:'Fraunces', serif; font-size:19px; font-weight:500;
+  }
+  .ticket-value small{
+    display:block; font-family:'IBM Plex Mono', monospace;
+    font-size:11px; color:var(--paper); opacity:.6; font-weight:400; margin-top:3px;
+  }
+  .ticket-mid{
+    display:flex; align-items:center; gap:10px; margin:2px 0 20px;
+  }
+  .ticket-mid .line{flex:1; height:1px; background:var(--line-on-ink); position:relative;}
+  .ticket-mid .plane{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold-soft);
+  }
+  .ticket-foot{
+    display:flex; justify-content:space-between; align-items:flex-end;
+  }
+  .ticket-rate{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; color:var(--paper); opacity:.75;
+  }
+  .ticket-stamp{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; letter-spacing:.08em;
+    border:1px solid var(--gold-soft);
+    color:var(--gold-soft);
+    padding:5px 10px;
+    border-radius:20px;
+    transform:rotate(-4deg);
+  }
+
+  /* ---------- problem section ---------- */
+  .section{padding:76px 0;}
+  .section-head{
+    max-width:60ch; margin:0 0 42px;
+  }
+  .kicker{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--slate); margin:0 0 12px;
+  }
+  h2{
+    font-family:'Fraunces', serif; font-weight:500;
+    font-size:clamp(26px, 3.2vw, 36px);
+    line-height:1.15; margin:0;
+    letter-spacing:-0.01em;
+  }
+  .problem-list{
+    list-style:none; margin:0; padding:0;
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .problem-list li{
+    background:var(--paper);
+    padding:22px 24px;
+    font-size:15px;
+    line-height:1.5;
+    display:flex; gap:14px;
+  }
+  .problem-list .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; color:var(--rust); flex-shrink:0; padding-top:2px;
+  }
+
+  /* ---------- vision ---------- */
+  .vision{
+    background:var(--ink);
+    color:var(--paper);
+    padding:90px 0;
+  }
+  .vision blockquote{
+    margin:0; max-width:22ch;
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(28px, 4vw, 44px);
+    line-height:1.2;
+  }
+  .vision blockquote span{color:var(--gold-soft); font-style:normal;}
+  .vision-cite{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--slate); margin-top:24px; display:block;
+  }
+
+  /* ---------- who ---------- */
+  .who-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:18px;
+  }
+  .who-card{
+    border:1px solid var(--line);
+    background:var(--paper-dim);
+    padding:22px 18px;
+    border-radius:var(--radius);
+  }
+  .who-card .who-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; color:var(--rust); margin:0 0 10px;
+  }
+  .who-card h3{
+    font-family:'Fraunces', serif; font-weight:500;
+    font-size:17px; margin:0 0 8px;
+  }
+  .who-card p{
+    font-size:13.5px; color:var(--slate); line-height:1.5; margin:0;
+  }
+
+  /* ---------- waitlist ---------- */
+  .waitlist{
+    background:var(--ink);
+    color:var(--paper);
+    padding:90px 0 96px;
+  }
+  .waitlist-grid{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:start;
+  }
+  .waitlist h2{color:var(--paper);}
+  .waitlist .kicker{color:var(--gold-soft);}
+  .waitlist p.intro{
+    font-size:15.5px; line-height:1.65; color:#C7CCDA; max-width:40ch; margin:16px 0 0;
+  }
+  form{
+    display:grid; gap:14px;
+  }
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--gold-soft); margin-bottom:7px; display:block;
+  }
+  input, select{
+    width:100%;
+    background:transparent;
+    border:1px solid var(--line-on-ink);
+    color:var(--paper);
+    font-family:'Instrument Sans', sans-serif;
+    font-size:14.5px;
+    padding:12px 13px;
+    border-radius:var(--radius);
+  }
+  input::placeholder{color:#7C88A6;}
+  input:focus-visible, select:focus-visible{
+    outline:2px solid var(--gold-soft); outline-offset:2px; border-color:var(--gold-soft);
+  }
+  select{color-scheme:dark;}
+  .field{display:flex; flex-direction:column;}
+  .submit-btn{
+    margin-top:6px;
+    background:var(--gold);
+    color:var(--ink);
+    font-weight:600;
+    font-size:15px;
+    border:none;
+    padding:14px 22px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    font-family:'Instrument Sans', sans-serif;
+    transition:background .15s ease;
+  }
+  .submit-btn:hover{background:var(--gold-soft);}
+  .submit-btn:focus-visible{outline:2px solid var(--paper); outline-offset:3px;}
+  .form-note{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px; color:#7C88A6; margin-top:4px;
+  }
+  .success{
+    display:none;
+    border:1px solid var(--gold-soft);
+    padding:22px;
+    border-radius:var(--radius);
+    font-family:'Fraunces', serif;
+    font-size:18px;
+  }
+  .success span{color:var(--gold-soft); font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; display:block; margin-bottom:8px;}
+
+  footer{
+    padding:30px 0;
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--slate);
+  }
+
+  @media (max-width: 860px){
+    .hero{grid-template-columns:1fr; gap:44px; padding-top:44px;}
+    .problem-list{grid-template-columns:1fr;}
+    .who-grid{grid-template-columns:1fr 1fr;}
+    .waitlist-grid{grid-template-columns:1fr; gap:38px;}
+    .field-row{grid-template-columns:1fr;}
+  }
+  @media (max-width: 520px){
+    .who-grid{grid-template-columns:1fr;}
+    footer{flex-direction:column; gap:8px; align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>EUR → MDL <b>19.42</b></span>
+      <span>USD → MDL <b>17.85</b></span>
+      <span>GBP → MDL <b>22.61</b></span>
+      <span>VENIT DE LA DISTANȚĂ, VIAȚĂ LOCALĂ</span>
+      <span>EUR → MDL <b>19.42</b></span>
+      <span>USD → MDL <b>17.85</b></span>
+      <span>GBP → MDL <b>22.61</b></span>
+      <span>VENIT DE LA DISTANȚĂ, VIAȚĂ LOCALĂ</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <header class="nav">
+      <div class="logo">COR<em>A</em></div>
+      <a href="#waitlist" class="nav-cta">Alătură-te listei de așteptare</a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CORA — financial freedom without borders</p>
+        <h1>O nouă generație de servicii financiare, construită în <i>Moldova</i>, gândită pentru economia digitală europeană.</h1>
+        <p class="lede">Primește, păstrează și cheltuiește venitul din străinătate — EUR, USD, MDL — dintr-un singur cont simplu. Fără să mai jonglezi cu cinci aplicații doar ca să fii plătit și să-ți plătești chiria.</p>
+        <div class="hero-actions">
+          <a href="#waitlist" class="btn-primary">Alătură-te listei de așteptare</a>
+          <span class="hero-sub">Gratuit · 2 minute · Fără aplicație încă, doar acces timpuriu</span>
+        </div>
+      </div>
+
+      <div class="ticket">
+        <div class="ticket-row">
+          <div>
+            <p class="ticket-label">De la</p>
+            <p class="ticket-value">Client, Berlin<small>Venit în EUR</small></p>
+          </div>
+          <div style="text-align:right">
+            <p class="ticket-label">Către</p>
+            <p class="ticket-value">Chișinău<small>Cheltuieli în MDL</small></p>
+          </div>
+        </div>
+        <div class="ticket-mid">
+          <span class="plane">→</span>
+          <span class="line"></span>
+          <span class="plane">păstrat în EUR / USD</span>
+          <span class="line"></span>
+          <span class="plane">→</span>
+        </div>
+        <div class="ticket-foot">
+          <span class="ticket-rate">Cardul cheltuiește în MDL la curs live</span>
+          <span class="ticket-stamp">ACCES TIMPURIU</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Problema</p>
+        <h2>Munca internațională nu ar trebui să însemne cinci aplicații financiare diferite.</h2>
+      </div>
+      <ul class="problem-list">
+        <li><span class="num">01</span> Primirea plăților de la clienți sau angajatori din străinătate, fără să pierzi o parte importantă din comisioane.</li>
+        <li><span class="num">02</span> Gestionarea EUR, USD și MDL în același timp, în loc să convertești totul imediat ce ajunge.</li>
+        <li><span class="num">03</span> Cheltuirea zilnică în Chișinău fără un card care înțelege cu adevărat venitul din străinătate.</li>
+        <li><span class="num">04</span> Înțelegerea a ce plătești cu adevărat în comisioane și spread — majoritatea aplicațiilor le ascund.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="vision">
+    <div class="wrap">
+      <blockquote>O casă financiară pentru <span>noua economie moldovenească.</span></blockquote>
+      <span class="vision-cite">— ideea pe care o testăm</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Pentru cine e</p>
+        <h2>Construit pentru oameni al căror venit nu vine de după colț.</h2>
+      </div>
+      <div class="who-grid">
+        <div class="who-card">
+          <p class="who-tag">01</p>
+          <h3>Freelanceri</h3>
+          <p>Plătiți de clienți din străinătate, cheltuiesc acasă.</p>
+        </div>
+        <div class="who-card">
+          <p class="who-tag">02</p>
+          <h3>Profesioniști IT</h3>
+          <p>Contractori sau salariați la companii străine.</p>
+        </div>
+        <div class="who-card">
+          <p class="who-tag">03</p>
+          <h3>Consultanți</h3>
+          <p>Facturează în EUR sau USD, trăiesc în MDL.</p>
+        </div>
+        <div class="who-card">
+          <p class="who-tag">04</p>
+          <h3>Angajați remote &amp; creatori</h3>
+          <p>Salariați sau plătiți din străinătate, locuiesc în Moldova.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="waitlist" id="waitlist">
+    <div class="wrap">
+      <div class="waitlist-grid">
+        <div>
+          <p class="kicker">Acces timpuriu</p>
+          <h2>Ajută-ne să construim viitorul finanțelor digitale pentru Moldova.</h2>
+          <p class="intro">Validăm ideea înainte să scriem vreo linie de cod. Două minute din timpul tău acum îți economisesc cinci aplicații mai târziu — și îți asigură acces prioritar la lansare.</p>
+        </div>
+
+        <div>
+          <form id="waitlistForm">
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Nume</label>
+                <input id="name" name="name" type="text" placeholder="Ana Popescu" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="ana@email.com" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="profession">Ce faci?</label>
+              <input id="profession" name="profession" type="text" placeholder="ex. Dezvoltator frontend, designer freelancer, consultant">
+            </div>
+            <div class="field">
+              <label for="income">Venit lunar din străinătate (opțional)</label>
+              <select id="income" name="income">
+                <option value="">Prefer să nu spun</option>
+                <option value="under-500">Sub 500 €</option>
+                <option value="500-1500">500 € – 1.500 €</option>
+                <option value="1500-3000">1.500 € – 3.000 €</option>
+                <option value="3000plus">3.000 €+</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Alătură-te listei de așteptare</button>
+            <p class="form-note">Fără spam. Un singur email când lansăm.</p>
+          </form>
+
+          <div class="success" id="successMsg">
+            <span>Ești pe listă</span>
+            Mulțumim — te contactăm înaintea tuturor.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <footer>
+      <span>CORA — financial freedom without borders</span>
+      <span>Chișinău, Moldova</span>
+    </footer>
+  </div>
+
+  <script>
+    // Lipește aici URL-ul Web App din Google Apps Script (se termină în /exec)
+    const SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_URL_HERE";
+
+    const form = document.getElementById('waitlistForm');
+    const success = document.getElementById('successMsg');
+    const submitBtn = form.querySelector('.submit-btn');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Se trimite...';
+
+      const data = new URLSearchParams(new FormData(form));
+
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Apps Script nu returnează headere CORS; trimitem "orb" și presupunem succes
+        body: data
+      })
+      .then(function(){
+        form.style.display = 'none';
+        success.style.display = 'block';
+      })
+      .catch(function(){
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Alătură-te listei de așteptare';
+        alert('A apărut o eroare. Te rugăm să încerci din nou.');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -830,23 +830,15 @@
             submitBtn.disabled = true;
             submitBtn.textContent = "Se trimite...";
 
-            const formData = {
-                name: form.name.value,
-                email: form.email.value,
-                profession: form.profession.value,
-                income: form.income.value
-            };
-
             try {
+                const formData = new FormData(form);
+                
                 const response = await fetch(
-                    "https://script.google.com/macros/s/AKfycbz8VAgQ8zS_icVae5iBEvqAu5hSxqImSQnFibA4oOt2oaaXokymL3sYU_yMZVn7NY-QTg/exec",
-                    {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify(formData)
-                    }
+                  "https://script.google.com/macros/s/AKfycbz8VAgQ8zS_icVae5iBEvqAu5hSxqImSQnFibA4oOt2oaaXokymL3sYU_yMZVn7NY-QTg/exec",
+                  {
+                    method: "POST",
+                    body: formData
+                  }
                 );
 
                 const result = await response.json();

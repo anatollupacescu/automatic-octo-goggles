@@ -121,6 +121,12 @@
             color: var(--rust);
         }
 
+        .nav-tools {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
         .nav-cta {
             font-family: 'IBM Plex Mono', monospace;
             font-size: 12.5px;
@@ -139,6 +145,52 @@
         .nav-cta:focus-visible {
             outline: 2px solid var(--rust);
             outline-offset: 2px;
+        }
+
+        .lang-switcher {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--paper-dim);
+        }
+
+        .lang-link {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11.5px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 7px 10px;
+            border-radius: 999px;
+            color: var(--slate);
+            transition: background .15s ease, color .15s ease;
+        }
+
+        .lang-link:hover {
+            background: var(--paper);
+            color: var(--ink);
+        }
+
+        .lang-link.is-active {
+            background: var(--ink);
+            color: var(--paper);
+            cursor: default;
+            pointer-events: none;
+        }
+
+        @media (max-width: 640px) {
+            header.nav {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .nav-tools {
+                width: 100%;
+                justify-content: space-between;
+            }
         }
 
         /* ---------- hero ---------- */
@@ -652,7 +704,13 @@
     <div class="wrap">
         <header class="nav">
             <div class="logo">COR<em>A</em></div>
-            <a href="#waitlist" class="nav-cta">Alătură-te listei de așteptare</a>
+            <div class="nav-tools">
+                <div class="lang-switcher" aria-label="Schimbător de limbă">
+                    <span class="lang-link is-active" aria-current="page">RO</span>
+                    <a class="lang-link" href="landing-page-ru.html">RU</a>
+                </div>
+                <a href="#waitlist" class="nav-cta">Înscrie-te în lista de așteptare</a>
+            </div>
         </header>
 
         <section class="hero">
@@ -872,7 +930,7 @@
                 renderTicker(fallbackRates);
             }
         }
-        
+
         // Hide the success message initially
         successMsg.style.display = "none";
 

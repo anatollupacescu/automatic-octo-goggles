@@ -61,28 +61,28 @@ if (form) {
 
   async function loadExchangeRates() {
     try {
-      const response = await fetch("https://api.exchangerate.host/latest?base=MDL&symbols=EUR,USD,GBP");
+        const response = await fetch("https://open.er-api.com/v6/latest/EUR");
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
 
-      const data = await response.json();
+        const data = await response.json();
 
-      if (!data || !data.success || !data.rates) {
-        throw new Error("Invalid exchange rate response");
-      }
+        if (data.result !== "success") {
+            throw new Error("Invalid response");
+        }
 
-      const rates = {
-        EUR: 1 / data.rates.EUR,
-        USD: 1 / data.rates.USD,
-        GBP: 1 / data.rates.GBP
-      };
+        const rates = {
+            EUR: data.rates.MDL,
+            USD: data.rates.MDL / data.rates.USD,
+            GBP: data.rates.MDL / data.rates.GBP
+        };
 
-      renderTicker(rates);
+        renderTicker(rates);
     } catch (error) {
-      console.error("Could not fetch live exchange rates:", error);
-      renderTicker(fallbackRates);
+        console.error("Could not fetch live exchange rates:", error);
+        renderTicker(fallbackRates);
     }
   }
 

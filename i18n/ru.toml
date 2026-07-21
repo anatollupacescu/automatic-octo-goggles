@@ -1,0 +1,141 @@
+[meta_description]
+other = "Новое поколение финансовых услуг, созданное в Молдове, для европейской цифровой экономики."
+
+[ticker_loading]
+other = "Загружаем курсы..."
+
+[ticker_tagline]
+other = "УДАЛЁННЫЙ ДОХОД, МЕСТНАЯ ЖИЗНЬ"
+
+[lang_switcher_label]
+other = "Переключатель языка"
+
+[nav_cta]
+other = "Записаться в лист ожидания"
+
+[hero_eyebrow]
+other = "CORA — financial freedom without borders"
+
+[hero_title_before]
+other = "Новое поколение финансовых услуг, созданное в"
+
+[hero_title_emphasis]
+other = "Молдове"
+
+[hero_title_after]
+other = "для европейской цифровой экономики."
+
+[hero_lede]
+other = "Получайте, храните и тратьте доход из-за рубежа — EUR, USD, MDL — с одного простого счёта. Больше не нужно жонглировать пятью приложениями, чтобы получить деньги и оплатить аренду."
+
+[hero_cta]
+other = "Записаться в лист ожидания"
+
+[hero_sub]
+other = "Бесплатно · 2 минуты · Приложения пока нет, только ранний доступ"
+
+[ticket_from_label]
+other = "От"
+[ticket_from_value]
+other = "Клиент, Берлин"
+[ticket_from_note]
+other = "Доход в EUR"
+[ticket_to_label]
+other = "Куда"
+[ticket_to_value]
+other = "Кишинёв"
+[ticket_to_note]
+other = "Расходы в MDL"
+[ticket_mid_held]
+other = "хранится в EUR / USD"
+[ticket_rate]
+other = "Карта тратит в MDL по текущему курсу"
+[ticket_stamp]
+other = "РАННИЙ ДОСТУП"
+
+[problem_kicker]
+other = "Проблема"
+[problem_title]
+other = "Международная работа не должна означать пять разных финансовых приложений."
+[problem_item_1]
+other = "Получение платежей от клиентов или работодателей из-за рубежа без потери значительной части на комиссиях."
+[problem_item_2]
+other = "Управление EUR, USD и MDL одновременно, вместо того чтобы сразу конвертировать всё, как только деньги приходят."
+[problem_item_3]
+other = "Повседневные траты в Кишинёве без карты, которая по-настоящему понимает доход из-за рубежа."
+[problem_item_4]
+other = "Понимание того, сколько вы на самом деле платите в комиссиях и спредах — большинство приложений это скрывают."
+
+[vision_quote]
+other = "Финансовый дом для"
+[vision_quote_emphasis]
+other = "новой молдавской экономики."
+[vision_cite]
+other = "— идея, которую мы проверяем"
+
+[who_kicker]
+other = "Для кого это"
+[who_title]
+other = "Создано для людей, чей доход приходит не из-за угла."
+[who_1_title]
+other = "Фрилансеры"
+[who_1_desc]
+other = "Получают оплату от клиентов из-за рубежа, тратят дома."
+[who_2_title]
+other = "IT-специалисты"
+[who_2_desc]
+other = "Работают по контракту или в штате иностранных компаний."
+[who_3_title]
+other = "Консультанты"
+[who_3_desc]
+other = "Выставляют счета в EUR или USD, живут в MDL."
+[who_4_title]
+other = "Удалённые сотрудники и авторы"
+[who_4_desc]
+other = "Получают зарплату или оплату из-за рубежа, живут в Молдове."
+
+[waitlist_kicker]
+other = "Ранний доступ"
+[waitlist_title]
+other = "Помогите нам построить будущее цифровых финансов для Молдовы."
+[waitlist_intro]
+other = "Мы проверяем эту идею, прежде чем написать хоть одну строку продукта. Две минуты вашего времени сейчас избавят вас от пяти приложений позже — и дадут приоритетный доступ при запуске."
+
+[form_name_label]
+other = "Имя"
+[form_name_placeholder]
+other = "Анна Попеску"
+[form_email_label]
+other = "Email"
+[form_email_placeholder]
+other = "anna@email.com"
+[form_profession_label]
+other = "Чем вы занимаетесь?"
+[form_profession_placeholder]
+other = "например, frontend-разработчик, фриланс-дизайнер, консультант"
+[form_income_label]
+other = "Ежемесячный доход из-за рубежа (необязательно)"
+[form_income_option_blank]
+other = "Предпочитаю не указывать"
+[form_income_option_1]
+other = "До 500 €"
+[form_income_option_2]
+other = "500 € – 1500 €"
+[form_income_option_3]
+other = "1500 € – 3000 €"
+[form_income_option_4]
+other = "3000 €+"
+[form_submit]
+other = "Записаться в лист ожидания"
+[form_note]
+other = "Никакого спама. Одно письмо, когда мы запустимся."
+
+[success_title]
+other = "Вы в списке"
+[success_body]
+other = "Спасибо — мы свяжемся с вами раньше всех."
+
+[footer_tagline]
+other = "CORA — financial freedom without borders"
+[footer_location]
+other = "Кишинёв, Молдова"

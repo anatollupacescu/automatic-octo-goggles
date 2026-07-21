@@ -1,0 +1,33 @@
+<form id="waitlistForm">
+    <div class="field-row">
+        <div class="field">
+            <label for="name">{{ i18n "form_name_label" }}</label>
+            <input id="name" name="name" type="text" placeholder="{{ i18n "form_name_placeholder" }}" required>
+        </div>
+        <div class="field">
+            <label for="email">{{ i18n "form_email_label" }}</label>
+            <input id="email" name="email" type="email" placeholder="{{ i18n "form_email_placeholder" }}" required>
+        </div>
+    </div>
+    <div class="field">
+        <label for="profession">{{ i18n "form_profession_label" }}</label>
+        <input id="profession" name="profession" type="text" placeholder="{{ i18n "form_profession_placeholder" }}">
+    </div>
+    <div class="field">
+        <label for="income">{{ i18n "form_income_label" }}</label>
+        <select id="income" name="income">
+            <option value="">{{ i18n "form_income_option_blank" }}</option>
+            <option value="under-500">{{ i18n "form_income_option_1" }}</option>
+            <option value="500-1500">{{ i18n "form_income_option_2" }}</option>
+            <option value="1500-3000">{{ i18n "form_income_option_3" }}</option>
+            <option value="3000plus">{{ i18n "form_income_option_4" }}</option>
+        </select>
+    </div>
+    <button type="submit" class="submit-btn">{{ i18n "form_submit" }}</button>
+    <p class="form-note">{{ i18n "form_note" }}</p>
+</form>
+
+<div class="success" id="successMsg">
+    <span>{{ i18n "success_title" }}</span>
+    {{ i18n "success_body" }}
+</div>

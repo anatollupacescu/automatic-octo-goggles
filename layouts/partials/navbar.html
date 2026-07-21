@@ -1,0 +1,15 @@
+<header class="nav">
+    <div class="logo">COR<em>A</em></div>
+    <div class="nav-tools">
+        <a href="#waitlist" class="nav-cta">{{ i18n "nav_cta" }}</a>
+        <div class="lang-switcher" aria-label="{{ i18n "lang_switcher_label" }}">
+            {{ range $.Page.AllTranslations }}
+            {{ if eq .Language.Lang $.Site.Language.Lang }}
+            <span class="lang-link is-active" aria-current="page">{{ .Language.LanguageCode | upper }}</span>
+            {{ else }}
+            <a class="lang-link" href="{{ .RelPermalink }}">{{ .Language.LanguageCode | upper }}</a>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</header>

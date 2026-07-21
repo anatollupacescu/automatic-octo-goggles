@@ -1,0 +1,112 @@
+{{ define "main" }}
+
+<div class="wrap">
+    {{ partial "navbar.html" . }}
+
+    <section class="hero">
+        <div>
+            <p class="eyebrow">{{ i18n "hero_eyebrow" }}</p>
+            <h1>{{ i18n "hero_title_before" }} <i>{{ i18n "hero_title_emphasis" }}</i>, {{ i18n "hero_title_after" }}</h1>
+            <p class="lede">{{ i18n "hero_lede" }}</p>
+            <div class="hero-actions">
+                <a href="#waitlist" class="btn-primary">{{ i18n "hero_cta" }}</a>
+                <span class="hero-sub">{{ i18n "hero_sub" }}</span>
+            </div>
+        </div>
+
+        <div class="ticket">
+            <div class="ticket-row">
+                <div>
+                    <p class="ticket-label">{{ i18n "ticket_from_label" }}</p>
+                    <p class="ticket-value">{{ i18n "ticket_from_value" }}<small>{{ i18n "ticket_from_note" }}</small></p>
+                </div>
+                <div style="text-align:right">
+                    <p class="ticket-label">{{ i18n "ticket_to_label" }}</p>
+                    <p class="ticket-value">{{ i18n "ticket_to_value" }}<small>{{ i18n "ticket_to_note" }}</small></p>
+                </div>
+            </div>
+            <div class="ticket-mid">
+                <span class="plane">→</span>
+                <span class="line"></span>
+                <span class="plane">{{ i18n "ticket_mid_held" }}</span>
+                <span class="line"></span>
+                <span class="plane">→</span>
+            </div>
+            <div class="ticket-foot">
+                <span class="ticket-rate">{{ i18n "ticket_rate" }}</span>
+                <span class="ticket-stamp">{{ i18n "ticket_stamp" }}</span>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="section">
+    <div class="wrap">
+        <div class="section-head">
+            <p class="kicker">{{ i18n "problem_kicker" }}</p>
+            <h2>{{ i18n "problem_title" }}</h2>
+        </div>
+        <ul class="problem-list">
+            <li><span class="num">01</span> {{ i18n "problem_item_1" }}</li>
+            <li><span class="num">02</span> {{ i18n "problem_item_2" }}</li>
+            <li><span class="num">03</span> {{ i18n "problem_item_3" }}</li>
+            <li><span class="num">04</span> {{ i18n "problem_item_4" }}</li>
+        </ul>
+    </div>
+</section>
+
+<section class="vision">
+    <div class="wrap">
+        <blockquote>{{ i18n "vision_quote" }} <span>{{ i18n "vision_quote_emphasis" }}</span></blockquote>
+        <span class="vision-cite">{{ i18n "vision_cite" }}</span>
+    </div>
+</section>
+
+<section class="section">
+    <div class="wrap">
+        <div class="section-head">
+            <p class="kicker">{{ i18n "who_kicker" }}</p>
+            <h2>{{ i18n "who_title" }}</h2>
+        </div>
+        <div class="who-grid">
+            <div class="who-card">
+                <p class="who-tag">01</p>
+                <h3>{{ i18n "who_1_title" }}</h3>
+                <p>{{ i18n "who_1_desc" }}</p>
+            </div>
+            <div class="who-card">
+                <p class="who-tag">02</p>
+                <h3>{{ i18n "who_2_title" }}</h3>
+                <p>{{ i18n "who_2_desc" }}</p>
+            </div>
+            <div class="who-card">
+                <p class="who-tag">03</p>
+                <h3>{{ i18n "who_3_title" }}</h3>
+                <p>{{ i18n "who_3_desc" }}</p>
+            </div>
+            <div class="who-card">
+                <p class="who-tag">04</p>
+                <h3>{{ i18n "who_4_title" }}</h3>
+                <p>{{ i18n "who_4_desc" }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="waitlist" id="waitlist">
+    <div class="wrap">
+        <div class="waitlist-grid">
+            <div>
+                <p class="kicker">{{ i18n "waitlist_kicker" }}</p>
+                <h2>{{ i18n "waitlist_title" }}</h2>
+                <p class="intro">{{ i18n "waitlist_intro" }}</p>
+            </div>
+
+            <div>
+                {{ partial "waitlist-form.html" . }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

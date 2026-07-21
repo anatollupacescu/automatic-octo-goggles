@@ -1,0 +1,31 @@
+baseURL = "https://example.com/"
+languageCode = "ro"
+title = "CORA"
+defaultContentLanguage = "ro"
+defaultContentLanguageInSubdir = false
+
+[params]
+  city = "Chișinău"
+  product = "CORA"
+  tagline = "CORA — financial freedom without borders"
+  googleFormsEndpoint = "https://script.google.com/macros/s/AKfycbwb3C-8-bIIivV0Q0e7ih15LKuagj2zkJPZKstjyRE46Ev20pFvM3_mMvNNm30jwaUVmQ/exec"
+
+[languages]
+
+  [languages.ro]
+    languageCode = "ro"
+    languageName = "Română"
+    weight = 1
+    contentDir = "content/ro"
+
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    weight = 2
+    contentDir = "content/en"
+
+  [languages.ru]
+    languageCode = "ru"
+    languageName = "Русский"
+    weight = 3
+    contentDir = "content/ru"

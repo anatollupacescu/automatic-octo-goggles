@@ -1,0 +1,141 @@
+[meta_description]
+other = "O nouă generație de servicii financiare, construită în Moldova, gândită pentru economia digitală europeană."
+
+[ticker_loading]
+other = "Se încarcă cursurile..."
+
+[ticker_tagline]
+other = "VENIT DE LA DISTANȚĂ, VIAȚĂ LOCALĂ"
+
+[lang_switcher_label]
+other = "Schimbător de limbă"
+
+[nav_cta]
+other = "Înscrie-te în lista de așteptare"
+
+[hero_eyebrow]
+other = "CORA — financial freedom without borders"
+
+[hero_title_before]
+other = "O nouă generație de servicii financiare, construită în"
+
+[hero_title_emphasis]
+other = "Moldova"
+
+[hero_title_after]
+other = "gândită pentru economia digitală europeană."
+
+[hero_lede]
+other = "Primește, păstrează și cheltuiește venitul din străinătate — EUR, USD, MDL — dintr-un singur cont simplu. Fără să mai jonglezi cu cinci aplicații doar ca să fii plătit și să-ți plătești chiria."
+
+[hero_cta]
+other = "Alătură-te listei de așteptare"
+
+[hero_sub]
+other = "Gratuit · 2 minute · Fără aplicație încă, doar acces timpuriu"
+
+[ticket_from_label]
+other = "De la"
+[ticket_from_value]
+other = "Client, Berlin"
+[ticket_from_note]
+other = "Venit în EUR"
+[ticket_to_label]
+other = "Către"
+[ticket_to_value]
+other = "Chișinău"
+[ticket_to_note]
+other = "Cheltuieli în MDL"
+[ticket_mid_held]
+other = "păstrat în EUR / USD"
+[ticket_rate]
+other = "Cardul cheltuiește în MDL la curs live"
+[ticket_stamp]
+other = "ACCES TIMPURIU"
+
+[problem_kicker]
+other = "Problema"
+[problem_title]
+other = "Munca internațională nu ar trebui să însemne cinci aplicații financiare diferite."
+[problem_item_1]
+other = "Primirea plăților de la clienți sau angajatori din străinătate, fără să pierzi o parte importantă din comisioane."
+[problem_item_2]
+other = "Gestionarea EUR, USD și MDL în același timp, în loc să convertești totul imediat ce ajunge."
+[problem_item_3]
+other = "Cheltuirea zilnică în Chișinău fără un card care înțelege cu adevărat venitul din străinătate."
+[problem_item_4]
+other = "Înțelegerea a ce plătești cu adevărat în comisioane și spread — majoritatea aplicațiilor le ascund."
+
+[vision_quote]
+other = "O casă financiară pentru"
+[vision_quote_emphasis]
+other = "noua economie moldovenească."
+[vision_cite]
+other = "— ideea pe care o testăm"
+
+[who_kicker]
+other = "Pentru cine e"
+[who_title]
+other = "Construit pentru oameni al căror venit nu vine de după colț."
+[who_1_title]
+other = "Freelanceri"
+[who_1_desc]
+other = "Plătiți de clienți din străinătate, cheltuiesc acasă."
+[who_2_title]
+other = "Profesioniști IT"
+[who_2_desc]
+other = "Contractori sau salariați la companii străine."
+[who_3_title]
+other = "Consultanți"
+[who_3_desc]
+other = "Facturează în EUR sau USD, trăiesc în MDL."
+[who_4_title]
+other = "Angajați remote & creatori"
+[who_4_desc]
+other = "Salariați sau plătiți din străinătate, locuiesc în Moldova."
+
+[waitlist_kicker]
+other = "Acces timpuriu"
+[waitlist_title]
+other = "Ajută-ne să construim viitorul finanțelor digitale pentru Moldova."
+[waitlist_intro]
+other = "Validăm ideea înainte să scriem vreo linie de cod. Două minute din timpul tău acum îți economisesc cinci aplicații mai târziu — și îți asigură acces prioritar la lansare."
+
+[form_name_label]
+other = "Nume"
+[form_name_placeholder]
+other = "Ana Popescu"
+[form_email_label]
+other = "Email"
+[form_email_placeholder]
+other = "ana@email.com"
+[form_profession_label]
+other = "Ce faci?"
+[form_profession_placeholder]
+other = "ex. Dezvoltator frontend, designer freelancer, consultant"
+[form_income_label]
+other = "Venit lunar din străinătate (opțional)"
+[form_income_option_blank]
+other = "Prefer să nu spun"
+[form_income_option_1]
+other = "Sub 500 €"
+[form_income_option_2]
+other = "500 € – 1.500 €"
+[form_income_option_3]
+other = "1.500 € – 3.000 €"
+[form_income_option_4]
+other = "3.000 €+"
+[form_submit]
+other = "Alătură-te listei de așteptare"
+[form_note]
+other = "Fără spam. Un singur email când lansăm."
+
+[success_title]
+other = "Mulțumim!"
+[success_body]
+other = "Cererea ta a fost înregistrată. Te vom ține la curent și vei fi printre primii care află când lansăm."
+
+[footer_tagline]
+other = "CORA — financial freedom without borders"
+[footer_location]
+other = "Chișinău, Moldova"

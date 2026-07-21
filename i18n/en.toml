@@ -1,0 +1,141 @@
+[meta_description]
+other = "A new generation of financial services, built in Moldova, designed for the European digital economy."
+
+[ticker_loading]
+other = "Loading exchange rates..."
+
+[ticker_tagline]
+other = "REMOTE INCOME, LOCAL LIFE"
+
+[lang_switcher_label]
+other = "Language switcher"
+
+[nav_cta]
+other = "Join the waitlist"
+
+[hero_eyebrow]
+other = "CORA — financial freedom without borders"
+
+[hero_title_before]
+other = "A new generation of financial services, built in"
+
+[hero_title_emphasis]
+other = "Moldova"
+
+[hero_title_after]
+other = "designed for the European digital economy."
+
+[hero_lede]
+other = "Receive, hold and spend your foreign income — EUR, USD, MDL — from one simple account. No more juggling five apps just to get paid and pay rent."
+
+[hero_cta]
+other = "Join the waitlist"
+
+[hero_sub]
+other = "Free · 2 minutes · No app yet, just early access"
+
+[ticket_from_label]
+other = "From"
+[ticket_from_value]
+other = "Client, Berlin"
+[ticket_from_note]
+other = "EUR income"
+[ticket_to_label]
+other = "To"
+[ticket_to_value]
+other = "Chișinău"
+[ticket_to_note]
+other = "MDL spending"
+[ticket_mid_held]
+other = "held in EUR / USD"
+[ticket_rate]
+other = "Card spends in MDL at live rate"
+[ticket_stamp]
+other = "EARLY ACCESS"
+
+[problem_kicker]
+other = "The problem"
+[problem_title]
+other = "Working internationally shouldn't mean juggling five financial apps."
+[problem_item_1]
+other = "Receiving payments from clients or employers abroad, without losing a chunk to fees."
+[problem_item_2]
+other = "Managing EUR, USD and MDL at once, instead of converting everything the moment it lands."
+[problem_item_3]
+other = "Spending day-to-day in Chișinău without a card that actually understands foreign income."
+[problem_item_4]
+other = "Understanding what you're really paying in fees and spreads — most apps hide it."
+
+[vision_quote]
+other = "One financial home for the"
+[vision_quote_emphasis]
+other = "new Moldovan economy."
+[vision_cite]
+other = "— the idea we're testing"
+
+[who_kicker]
+other = "Who it's for"
+[who_title]
+other = "Built for people whose income doesn't come from around the corner."
+[who_1_title]
+other = "Freelancers"
+[who_1_desc]
+other = "Paid by clients abroad, spending at home."
+[who_2_title]
+other = "IT professionals"
+[who_2_desc]
+other = "Contracting or salaried by foreign companies."
+[who_3_title]
+other = "Consultants"
+[who_3_desc]
+other = "Invoicing in EUR or USD, living in MDL."
+[who_4_title]
+other = "Remote employees & creators"
+[who_4_desc]
+other = "Salaried or paid abroad, based in Moldova."
+
+[waitlist_kicker]
+other = "Early access"
+[waitlist_title]
+other = "Help us build the future of digital finance for Moldova."
+[waitlist_intro]
+other = "We're validating this before writing a line of product code. Two minutes of your time now saves you five apps later — and gets you first access when we launch."
+
+[form_name_label]
+other = "Name"
+[form_name_placeholder]
+other = "Ana Popescu"
+[form_email_label]
+other = "Email"
+[form_email_placeholder]
+other = "ana@email.com"
+[form_profession_label]
+other = "What do you do?"
+[form_profession_placeholder]
+other = "e.g. Frontend developer, freelance designer, consultant"
+[form_income_label]
+other = "Monthly foreign income range (optional)"
+[form_income_option_blank]
+other = "Prefer not to say"
+[form_income_option_1]
+other = "Under €500"
+[form_income_option_2]
+other = "€500 – €1,500"
+[form_income_option_3]
+other = "€1,500 – €3,000"
+[form_income_option_4]
+other = "€3,000+"
+[form_submit]
+other = "Join the waitlist"
+[form_note]
+other = "No spam. One email when we launch early access."
+
+[success_title]
+other = "You're on the list"
+[success_body]
+other = "Thanks — we'll reach out before anyone else gets access."
+
+[footer_tagline]
+other = "CORA — financial freedom without borders"
+[footer_location]
+other = "Chișinău, Moldova"

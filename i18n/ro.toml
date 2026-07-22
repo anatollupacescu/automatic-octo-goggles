@@ -94,6 +94,21 @@ other = "Angajați remote & creatori"
 [who_4_desc]
 other = "Salariați sau plătiți din străinătate, locuiesc în Moldova."
 
+[blog_kicker]
+other = "Noutăți"
+[blog_title]
+other = "Însemnări de la echipă, pe măsură ce construim."
+[blog_intro]
+other = "Actualizări ocazionale despre stadiul proiectului, ce învățăm și ce urmează."
+[blog_read_more]
+other = "Citește articolul"
+[blog_view_all]
+other = "Vezi toate articolele"
+[blog_back_to_all]
+other = "← Toate articolele"
+[blog_back_home]
+other = "← Înapoi la CORA"
+
 [waitlist_kicker]
 other = "Acces timpuriu"
 [waitlist_title]

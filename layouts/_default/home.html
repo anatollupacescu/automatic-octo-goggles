@@ -93,6 +93,36 @@
     </div>
 </section>
 
+<section class="section" id="blog">
+    <div class="wrap">
+        <div class="section-head">
+            <p class="kicker">{{ i18n "blog_kicker" }}</p>
+            <h2>{{ i18n "blog_title" }}</h2>
+            <p class="intro">{{ i18n "blog_intro" }}</p>
+        </div>
+
+        {{ $blog := .Site.GetPage "section" "blog" }}
+        {{ if $blog }}
+        {{ $posts := $blog.Pages.ByDate.Reverse }}
+        {{ if gt (len $posts) 0 }}
+        <div class="blog-grid">
+            {{ range first 3 $posts }}
+            <a class="blog-card" href="{{ .RelPermalink }}">
+                <p class="blog-card-date">{{ .Date.Format "2 Jan 2006" }}</p>
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Params.summary | default .Summary }}</p>
+                <span class="blog-card-link">{{ i18n "blog_read_more" }} →</span>
+            </a>
+            {{ end }}
+        </div>
+        <div class="blog-footer">
+            <a href="{{ $blog.RelPermalink }}" class="blog-view-all">{{ i18n "blog_view_all" }} →</a>
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+</section>
+
 <section class="waitlist" id="waitlist">
     <div class="wrap">
         <div class="waitlist-grid">

@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<div class="wrap">
+    {{ partial "navbar.html" . }}
+</div>
+
+<section class="section">
+    <div class="wrap">
+        <a href="{{ .Site.Home.RelPermalink }}" class="blog-back">{{ i18n "blog_back_home" }}</a>
+        <div class="section-head">
+            <p class="kicker">{{ i18n "blog_kicker" }}</p>
+            <h2>{{ i18n "blog_title" }}</h2>
+            <p class="intro">{{ i18n "blog_intro" }}</p>
+        </div>
+        {{ $posts := .Pages.ByDate.Reverse }}
+        {{ if gt (len $posts) 0 }}
+        <div class="blog-grid blog-grid-full">
+            {{ range $posts }}
+            <a class="blog-card" href="{{ .RelPermalink }}">
+                <p class="blog-card-date">{{ .Date.Format "2 Jan 2006" }}</p>
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Params.summary | default .Summary }}</p>
+                <span class="blog-card-link">{{ i18n "blog_read_more" }} →</span>
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}

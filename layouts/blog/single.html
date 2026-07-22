@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<div class="wrap">
+    {{ partial "navbar.html" . }}
+</div>
+
+<article class="section post">
+    <div class="wrap wrap-narrow">
+        {{ $blog := .Site.GetPage "section" "blog" }}
+        {{ if $blog }}
+        <a href="{{ $blog.RelPermalink }}" class="blog-back">{{ i18n "blog_back_to_all" }}</a>
+        {{ end }}
+
+        <div class="post-head">
+            <p class="post-date">{{ .Date.Format "2 January 2006" }}</p>
+            <h1>{{ .Title }}</h1>
+            {{ if .Params.summary }}
+            <p class="post-summary">{{ .Params.summary }}</p>
+            {{ end }}
+        </div>
+
+        <div class="post-body">
+            {{ .Content }}
+        </div>
+    </div>
+</article>
+
+{{ end }}

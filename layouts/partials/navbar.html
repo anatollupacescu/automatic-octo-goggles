@@ -1,6 +1,10 @@
 <header class="nav">
     <div class="logo">COR<em>A</em></div>
     <div class="nav-tools">
+        {{ $blog := .Site.GetPage "section" "blog" }}
+        {{ if $blog }}
+        <a href="{{ $blog.RelPermalink }}" class="nav-link">{{ i18n "blog_kicker" }}</a>
+        {{ end }}
         <a href="#waitlist" class="nav-cta">{{ i18n "nav_cta" }}</a>
         <div class="lang-switcher" aria-label="{{ i18n "lang_switcher_label" }}">
             {{ range $.Page.AllTranslations }}

@@ -94,6 +94,21 @@ other = "Удалённые сотрудники и авторы"
 [who_4_desc]
 other = "Получают зарплату или оплату из-за рубежа, живут в Молдове."
 
+[blog_kicker]
+other = "Обновления"
+[blog_title]
+other = "Заметки от команды по мере разработки."
+[blog_intro]
+other = "Периодические обновления о ходе проекта, наших выводах и планах."
+[blog_read_more]
+other = "Читать статью"
+[blog_view_all]
+other = "Все статьи"
+[blog_back_to_all]
+other = "← Все статьи"
+[blog_back_home]
+other = "← Назад к CORA"
+
 [waitlist_kicker]
 other = "Ранний доступ"
 [waitlist_title]

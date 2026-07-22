@@ -94,6 +94,21 @@ other = "Remote employees & creators"
 [who_4_desc]
 other = "Salaried or paid abroad, based in Moldova."
 
+[blog_kicker]
+other = "Updates"
+[blog_title]
+other = "Notes from the team as we build."
+[blog_intro]
+other = "Occasional updates on where the project stands, what we're learning, and what's coming next."
+[blog_read_more]
+other = "Read post"
+[blog_view_all]
+other = "View all posts"
+[blog_back_to_all]
+other = "← All posts"
+[blog_back_home]
+other = "← Back to CORA"
+
 [waitlist_kicker]
 other = "Early access"
 [waitlist_title]

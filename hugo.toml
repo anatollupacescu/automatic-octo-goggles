@@ -1,5 +1,5 @@
 baseURL = "https://example.com/"
-languageCode = "ro"
+locale = "ro"
 title = "CORA"
 defaultContentLanguage = "ro"
 defaultContentLanguageInSubdir = false
@@ -13,19 +13,19 @@ defaultContentLanguageInSubdir = false
 [languages]
 
   [languages.ro]
-    languageCode = "ro"
-    languageName = "Română"
+    locale = "ro"
+    label = "Română"
     weight = 1
     contentDir = "content/ro"
 
   [languages.en]
-    languageCode = "en"
-    languageName = "English"
+    locale = "en"
+    label = "English"
     weight = 2
     contentDir = "content/en"
 
   [languages.ru]
-    languageCode = "ru"
-    languageName = "Русский"
+    locale = "ru"
+    label = "Русский"
     weight = 3
     contentDir = "content/ru"
